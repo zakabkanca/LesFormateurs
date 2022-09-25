@@ -87,11 +87,28 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
+              {/* {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
-              ))}
+              ))} */}
+              <MenuItem onClick={handleCloseNavMenu}>   
+                  <a href="/Formateurs">
+                    <Typography textAlign="center">Formateurs</Typography> 
+                  </a>
+              </MenuItem>
+
+              <MenuItem onClick={handleCloseNavMenu}>
+                <a href="/Formations">
+                  <Typography textAlign="center">Formations</Typography> 
+                </a>
+              </MenuItem>
+
+              <MenuItem onClick={handleCloseNavMenu}>
+                <a href="/Inscription">
+                  <Typography textAlign="center">Inscription</Typography>
+                </a>
+              </MenuItem>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -114,15 +131,41 @@ const ResponsiveAppBar = () => {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
+            {/* {pages.map((page) => (
+               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
+              </Button>             ))} */}
+
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                href="/Formateurs"
+              >
+                  <Typography textAlign="center" >Formateurs</Typography> 
               </Button>
-            ))}
+
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                href="/Formations"
+              >
+                <Typography textAlign="center" >Formations</Typography> 
+              </Button>
+
+              <Button
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+                href="/Inscription"
+              >
+                <Typography textAlign="center"  >Inscription </Typography>
+              </Button>
+
+
+
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
